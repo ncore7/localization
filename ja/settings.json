@@ -49,6 +49,9 @@
   "sideButtonLabels": "サイドボタンのラベルを表示",
   "showModelFileNames": "マイモデル: 常に完全なモデルファイル名を表示",
   "colorThemeLabel": "カラーテーマ",
+  "appNavigationBarPositionLabel": "ナビゲーションバーの位置",
+  "appNavigationBarPositionTop": "上",
+  "appNavigationBarPositionLeft": "左",
   "complexityLevelLabel": "ユーザーインターフェースの複雑さレベル",
   "selectComplexityLevelPlaceholder": "デフォルトのUI複雑さレベルを選択",
   "userComplexityLevelLabel": "ユーザー",
@@ -92,6 +95,7 @@
   "changeLanguageLabel": "アプリの言語を選択 (まだ開発中)",
   "developerLabel": "開発者",
   "localServiceLabel": "ローカルLLMサービス (ヘッドレス)",
+  "modelDefaultsLabel": "モデルの既定値",
   "showExperimentalFeaturesLabel": "実験的機能を表示",
   "appFirstLoadLabel": "アプリ初回ロード体験",
   "showDebugInfoBlocksInChatLabel": "チャットにデバッグ情報ブロックを表示",
@@ -116,26 +120,30 @@
   "appUpdateChannel.shortLabel": "アプリのアップデートチャネル",
   "appUpdateChannel.hint": "LM Studio アプリのアップデートを受信するチャネルを選択してください。 \"{{stableName}}\" はほとんどのユーザーに推奨されるチャネルです。",
 
+  "autoFitMinContextLength.label": "AutoFitの最小コンテキスト長",
+  "autoFitMinContextLength.description": "AutoFitでこのトークン数以上のコンテキストを確保します。この最小値を満たせないモデルは読み込みに失敗します。",
+
   "modelLoadingGuardrails.label": "モデル読み込みガードレール",
   "modelLoadingGuardrails.description": "システムリソースの制限を超えてモデルを読み込むと、システムの不安定性やフリーズを引き起こす可能性があります。ガードレールは、偶発的なオーバーロードを防ぎます。必要に応じてここでこれらの制限を調整できますが、システムの制限に近いモデルを読み込むと、安定性が低下する可能性があることに注意してください。",
-  "modelLoadingGuardrails.value.off": "OFF (推奨されません)",
+  "modelLoadingGuardrails.value.off": "オフ (推奨されません)",
   "modelLoadingGuardrails.value.off/subTitle": "システムオーバーロードに対する予防策はありません",
-  "modelLoadingGuardrails.value.off/detail": "Off detail",
+  "modelLoadingGuardrails.value.off/detail": "オフ（詳細）",
   "modelLoadingGuardrails.value.low": "カジュアル",
-  "modelLoadingGuardrails.value.low/subTitle": "システムオーバーロードに対する予防策はありません",
-  "modelLoadingGuardrails.value.low/detail": "Relaxed detail",
+  "modelLoadingGuardrails.value.low/subTitle": "システムオーバーロードに対する軽度な対策",
+  "modelLoadingGuardrails.value.low/detail": "緩め（詳細）",
   "modelLoadingGuardrails.value.medium": "バランス",
   "modelLoadingGuardrails.value.medium/subTitle": "システムオーバーロードに対する中程度の予防策",
-  "modelLoadingGuardrails.value.medium/detail": "Balanced detail",
+  "modelLoadingGuardrails.value.medium/detail": "標準（詳細）",
   "modelLoadingGuardrails.value.high": "厳格",
   "modelLoadingGuardrails.value.high/subTitle": "システムオーバーロードに対する強力な予防策",
-  "modelLoadingGuardrails.value.high/detail": "Strict detail",
+  "modelLoadingGuardrails.value.high/detail": "厳格（詳細）",
   "modelLoadingGuardrails.value.custom": "カスタム",
   "modelLoadingGuardrails.value.custom/subTitle": "読み込むことができる最大モデルサイズの制限を設定します",
-  "modelLoadingGuardrails.value.custom/detail": "Custom detail",
+  "modelLoadingGuardrails.value.custom/detail": "カスタム（詳細）",
   "modelLoadingGuardrails.custom.label": "メモリ制限: ",
   "modelLoadingGuardrails.custom.unitGB": "GB",
   "modelLoadingGuardrails.custom.description": "モデルの読み込みに対するカスタムメモリ制限を設定します。この制限を超えるモデルは読み込まれません。",
+  "modelLoadingGuardrails.alwaysAllowLoadAnyway": "（非推奨）Alt／Optionキーを押さずに常に「強制的に読み込む」を許可",
 
   "experimentalLoadPresets": "モデル読み込みのプリセットにおける設定サポートを有効にする",
   "experimentalLoadPresets.description": "プリセットがモデル読み込み設定を含むことを許可するかどうかを指定します。この機能は実験的であり、フィードバックを歓迎します。",
@@ -191,5 +199,19 @@
       "warnDescription": "ツール呼び出しの確認を無効にすることは危険です。プラグインのいずれかが、破壊的なアクションを実行する可能性のあるツールを提供している場合（コマンドの実行、ファイルの削除、ファイルの上書き、ファイルのアップロードなど）、モデルは確認なしにそれを実行できるようになります。ツールごと、またはプラグインごとに確認を無効にすることは常に可能です。このオプションを有効にすることは推奨されません。十分に注意してください。",
       "warnButton": "リスクを理解しました"
     }
+  },
+
+  "defaultContextLength": {
+    "label": "既定のコンテキスト長",
+    "maxTitle": "モデルの最大値",
+    "customTitle": "カスタム値",
+    "maxSubtitle": "各モデルがサポートする最大コンテキスト長を使用します。",
+    "customSubtitle": "新しいモデルを読み込むときの既定のコンテキスト長を設定します。モデルがサポートする最大値がこれより小さい場合は、その最大値を使用します。",
+    "invalidNaNError": "コンテキスト長が無効です。{{value}}を使用します",
+    "invalidRangeError": "コンテキスト長が無効です。1から2^30の範囲で指定してください。{{value}}を使用します",
+    "largeContextWarning": "コンテキスト長を大きくすると、モデルのメモリ使用量も増えます。判断に迷う場合は既定値を変更しないでください"
+  },
+  "jitTTL": {
+    "subtitle": "JITで読み込まれたモデルは、指定した時間アイドル状態が続くと自動的にアンロードされます。"
   }
 }

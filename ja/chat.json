@@ -60,6 +60,8 @@
   "actions/loadLastModel": "前回使用したモデルを再読み込み",
   "actions/loadLastModel/tooltip": "このチャットで最後に使用したモデルを読み込むにはクリック:\n\n{{lastModel}}",
   "actions/loadLastModel/error": "前回使用したモデルの読み込みに失敗しました。",
+  "actions/clearLastUsedModel": "最後に使用したモデルをクリア",
+  "actions/clearLastUsedModel/error": "最後に使用したモデルをクリアできませんでした。",
   "actions/continueCurrentModel": "現在のモデルを使用",
   "actions/continueCurrentModel/tooltip": "現在のモデル: {{currentModel}}",
   "actions/changeToLastUsedModel": "{{lastModel}}を読み込む",
@@ -89,6 +91,7 @@
   "actions/createChatAtRoot/error": "ルートでチャットの作成に失敗しました",
   "actions/createFolderAtRoot": "新規フォルダー...",
   "actions/createFolderAtRoot/error": "ルートでフォルダーの作成に失敗しました",
+  "actions/createFolder/error": "フォルダーを作成できませんでした",
   "actions/openInFolder/mac": "Finderで表示",
   "actions/openInFolder/pc": "エクスプローラーで表示",
 
@@ -192,7 +195,9 @@
       },
       "startRunningDevelopmentPlugin/error": "開発モードでプラグインの実行開始に失敗しました",
       "stopRunningDevelopmentPlugin/error": "開発モードでプラグインの実行停止に失敗しました",
-      "forceReInitPlugin/error": "プラグインの再起動に失敗しました"
+      "forceReInitPlugin/error": "プラグインの再起動に失敗しました",
+      "signOutMcpPlugin/error": "プラグインからサインアウトできませんでした",
+      "cancelMcpAuthentication/error": "プラグイン認証をキャンセルできませんでした"
     },
     "pluginConfiguration": {
       "title": "プラグイン設定",
@@ -237,7 +242,9 @@
     "stopReason.maxPredictedTokensReached": "最大予測トークン数に到達",
     "stopReason.contextLengthReached": "コンテキスト長制限に到達",
     "speculativeDecodedBy": "ドラフトモデル: {{decodedBy}}",
-    "speculativeDecodingStats": "{{total}}個中{{accepted}}個のドラフトトークンを受理 ({{percentage}}%)"
+    "speculativeDecodingStats": "{{total}}個中{{accepted}}個のドラフトトークンを受理 ({{percentage}}%)",
+    "speculativeDecodingAcceptedPercentage": "ドラフトトークンの{{percentage}}%を採用",
+    "speculativeDecodingTooltip": "ドラフトトークンを{{accepted}}/{{total}}個採用"
   },
 
   "tabs": {

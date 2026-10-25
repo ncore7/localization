@@ -32,6 +32,7 @@
   "loader.model.bundled": "バンドル済み",
   "action.cancel": "キャンセル",
   "indexingOngoing": "モデルをインデックス中... しばらくお待ちください",
+  "indexingPageLoaderText": "モデルをインデックス化しています...",
   "index/error_one": "次のフォルダーのインデックス作成に失敗しました:",
   "index/error_other": "次のフォルダーのインデックス作成に失敗しました:",
   "badModels/title_one": "次のモデルのインデックス作成に失敗しました:",
@@ -95,6 +96,16 @@
   "loader.info.clickOnModelToLoad": "モデルをクリックして読み込みます",
   "loader.info.configureLoadParameters": "モデルの読み込みパラメーターを設定します",
   "loader.info.activeGeneratorWarning": "カスタムジェネレーターを使用しているプラグインを使用しています。このプラグインに応じて、現在読み込まれているモデルが適用される場合とされない場合があります",
+  "loader.guardrails.estimatedMemoryUsage": "推定メモリ使用量",
+  "loader.guardrails.total": "合計",
+  "loader.guardrails.gpu": "GPU",
+  "loader.guardrails.unavailable": "このモデルのメモリ使用量を推定できません",
+  "loader.guardrails.notEnoughResources": "現在の設定ではモデルを読み込むためのリソースが不足しています",
+  "loader.guardrails.notEnoughResources/options": "オプション",
+  "loader.guardrails.notEnoughResources.moreInfoSection.appearsNotEnoughMemory": "このモデルを読み込むにはシステムメモリが不足しているようです。",
+  "loader.guardrails.notEnoughResources.moreInfoSection.ifYouBelieveThisIsIncorrect": "設定でモデル読み込みの制限を調整するか、<altOptionKey />を押したままにすると読み込めます。",
+  "loader.guardrails.notEnoughResources.moreInfoSection.warning": "大きすぎるモデルを読み込むとシステムに過大な負荷がかかり、フリーズするおそれがあります。",
+  "loader.guardrails.notEnoughResources.alwaysAllowLoadAnyway": "（非推奨）Alt／Optionキーを押さずに常に「強制的に読み込む」を許可",
 
   "virtual": {
     "local": {
@@ -110,6 +121,12 @@
       "next": "次へ",
       "confirm": "作成",
       "error": "仮想モデルの作成に失敗しました"
+    },
+    "altsSelect": {
+      "title": "モデルソースを切り替え",
+      "resetButton": "既定値にリセット",
+      "description": "このモデルには複数のソースファイルがあります。",
+      "trigger": "バリアント"
     }
   }
 }
